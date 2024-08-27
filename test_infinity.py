@@ -2,7 +2,6 @@ import operator
 from datetime import datetime
 
 import pytest
-import six
 
 from infinity import inf, Infinity
 
@@ -59,7 +58,7 @@ class TestNegativeInfinity(InfinityTestCase):
     value = -inf
 
     def test_unicode_coercion(self):
-        assert six.text_type(-inf) == '-inf'
+        assert str(-inf) == '-inf'
 
     def test_repr(self):
         assert repr(-inf) == '-inf'
@@ -125,7 +124,7 @@ class TestNegativeInfinity(InfinityTestCase):
 
 class TestInfinity(InfinityTestCase):
     def test_unicode_coercion(self):
-        assert six.text_type(inf) == 'inf'
+        assert str(inf) == 'inf'
 
     def test_float_coercion(self):
         assert float(inf) == float('inf')

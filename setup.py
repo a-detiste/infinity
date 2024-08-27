@@ -26,7 +26,6 @@ extras_require = {
     'test': [
         'pytest>=2.2.3',
         'Pygments>=1.2',
-        'six>=1.4.1',
         'flake8>=2.4.0',
         'isort>=4.2.2',
     ],
